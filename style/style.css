@@ -7,7 +7,7 @@
 
 .content
 {
-  background: url(../images/background.png) no-repeat center/cover;
+  background: url(../images/background.png) top center no-repeat fixed;
   
   width: 80%;
   height: 500px;
