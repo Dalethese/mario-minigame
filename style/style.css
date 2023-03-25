@@ -1,0 +1,120 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content
+{
+  background: url(../images/background.png) no-repeat center/cover;
+  
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  border: 1px solid #333;
+
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.mario-walking
+{
+  position: absolute;
+  width: 80px;
+  bottom: 58px;
+}
+.mario-walking.jump
+{
+  animation: jump 500ms linear;
+}
+.pipe
+{
+  position: absolute;
+  bottom: 58px;
+  animation: pipe-animation 1.5s linear infinite;
+}
+
+.retry
+{
+  width: 200px;
+  height: 100px;
+  background-color: #333;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+.retry p a
+{
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 5px;
+  border-bottom: 0px solid #fff;
+
+
+  position: relative;
+}
+.retry p a:hover
+{
+  border-bottom: 1px solid #fff;
+}
+.retry p a::before
+{
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -20px;
+
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 0 50px 50px 0;
+}
+
+
+@keyframes jump {
+  0%
+  {
+    bottom: 58px;
+  }
+  40%,50%,60%
+  {
+    bottom: 160px;
+  }
+  100%
+  {
+    bottom: 58px;
+  }
+}
+
+@keyframes pipe-animation {
+  from
+  {
+    right: -15%;
+  }
+  to 
+  {
+    right: 100%;
+  }
+}
+
+@keyframes retry-anim {
+  from 
+  {
+    opacity: 0;
+    transform: scale(0) translate(-50%, -50%);
+  }
+  to 
+  {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
