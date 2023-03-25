@@ -25,6 +25,7 @@ const loop = setInterval(() => {
     mario.style.width = '60px'
     mario.style.marginLeft = '20px'
 
+    retry.style.display = 'flex'
     retry.style.animation = 'retry-anim .5s ease-in-out forwards'
 
     clearInterval(loop)
@@ -33,3 +34,4 @@ const loop = setInterval(() => {
 
 document.addEventListener('keydown', jump)
 document.addEventListener('touchstart', jump)
+document.addEventListener('click', jump)
